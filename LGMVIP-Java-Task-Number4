@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+public class BasicCalculater{
+    public static void main(String args[]){
+        double number1,number2;
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the numbers");
+        number1=input.nextDouble();
+        number2=input.nextDouble();
+        System.out.println("Enter the operator (+ , - , * , / )");
+        char operator=input.next().charAt(0);
+        double result=0;
+        switch(operator){
+            case '+':
+                result=number1+number2;
+                break;
+            case '-':
+                result=number1-number2;
+                break;
+            case '*':
+                result=number1*number2;
+                break;
+            case '/':
+                result=number1/number2;
+                break;
+            default:
+            System.out.println("Wrong input!!");
+        }
+        System.out.println("The final answer is: ");
+        System.out.println();
+        
+        System.out.println(number1+" "+operator+" "+number2+" = "+result);
+    }
+}
